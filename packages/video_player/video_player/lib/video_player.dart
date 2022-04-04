@@ -238,7 +238,8 @@ class VideoPlayerController extends ValueNotifier<VideoPlayerValue> {
   /// `'file://${file.path}'`.
   VideoPlayerController.file(File file,
       {this.closedCaptionFile, this.videoPlayerOptions})
-      : dataSource = 'file://${file.path}',
+      // : dataSource = 'file://${file.path}',
+     : dataSource = file.Uri.toString() ,
         dataSourceType = DataSourceType.file,
         package = null,
         formatHint = null,
